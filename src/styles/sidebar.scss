@@ -1,0 +1,124 @@
+.sidebar {
+    background-color: cadetblue;
+    text-align: center;
+
+    .wardog-logo img {
+        width: 100%vw;
+        height: 200px;
+    }
+    
+    .articles{
+
+        a {
+            display: grid;
+            grid-template-columns: 1fr;
+            margin-bottom: 5px;
+            text-decoration: none;
+            color: white;
+            border-bottom: 1px solid transparent;
+            font-size: 1.25em;
+    
+            &:hover {
+                color: blue;    
+            }
+        }        
+    }
+    
+
+
+    .side-content {
+        padding-left: 10px;
+    }
+
+    h3 {
+        font-size: 2em;
+        text-decoration: underline;
+    }
+
+    .sponsor-logo {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        img {
+            width: 200px;
+            padding-bottom: 25px;
+
+            &:hover {
+                color: blue;
+            }
+        }
+    }
+
+    .social-media-icon {
+        
+        font-size: 3em;
+
+        a {
+            color: white;
+            
+            &:hover {
+                color:blue;
+            }
+        }
+
+    }
+
+    .contact-info {
+        .email {
+            margin-bottom: 5px;
+            text-decoration: none;
+            color: white;
+            border-bottom: 1px solid transparent;
+            font-size: 1.25em;
+        }
+    }
+}
+@media (max-width: 750px) {
+    .sidebar {
+        display: grid;
+        grid-template-columns: 1fr;
+        font-size: .4rem;
+
+        .wardog-logo img {
+            width: 100px;
+            height: auto;
+            margin-bottom: none;
+        }
+        
+        .side-content {
+            padding: 0px;
+            h3 {
+                font-size: .8rem;
+            }
+        
+            .social-media {
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                align-items: center;
+                
+                h3 {
+                    justify-self: end;
+                }
+
+                .social-media-icon {  
+                    justify-self: start; 
+                    padding: 10px;  
+                    font-size: 1rem;                  
+                }
+            }
+        
+            .sponsors-wrapper{
+                .sponsor-logo {
+                    display: flex;
+                    justify-content: center;
+            
+                    img {
+                        width: 65px;
+                        padding: 0px 5px 5px 5px;
+                    }
+                }
+            }
+        
+        }
+    } 
+}

@@ -1,0 +1,102 @@
+.navigation-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    height: min-content;
+    width: auto;
+
+
+    .left-side-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 20px;
+
+            .nav-link-wrapper {
+                border-bottom: 1px solid transparent;
+                transition: 0.5s ease-in-out;
+                text-transform: uppercase;
+                font-size: 1.25rem;
+                
+                a {
+                    color: grey;
+                    text-decoration: none;
+                    margin-right: 20px;
+                    border-bottom: 1px solid grey;
+
+
+                    &:hover {
+                        color: black;
+                        border-bottom: 1px solid black;
+                        cursor: pointer;
+                        background-color: rgba(160, 178, 184, .3);
+                    }
+                }
+            }
+    }
+
+
+    .right-side-nav {
+        display: grid;
+        grid-template-rows: 1fr .25fr;
+        font-weight: bolder;
+        font-size: 2.5em;
+        text-align: end;
+
+        .player-name {
+            padding-bottom: 0px;
+        }
+
+        .login-logout-button {
+            font-size: .3em;
+            padding-left: 30px;
+            color: black;
+            text-decoration: none;
+
+            &:hover {
+                color: blue;
+                cursor: pointer;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 750px) {
+
+    .navigation-wrapper {
+        height: 75px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr;
+        justify-self: center;
+        margin: 0px;
+        height: auto;
+        font-size: small;
+
+        .left-side-nav {
+            grid-row: 1;
+            grid-template-columns: 1fr 1.75fr;
+            text-align: center;
+            align-items: center;
+            justify-content: space-around;
+            margin-bottom: 5px;
+            margin-top: 5px;
+
+            .nav-link-wrapper {
+                font-size: x-small;
+            }
+
+        }
+        .right-side-nav {
+            grid-row: 2;
+            justify-self: center;
+            font-size: x-large;
+            text-align: center;
+            padding-right: 0px;
+
+        }
+    }
+}

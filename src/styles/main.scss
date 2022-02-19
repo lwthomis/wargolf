@@ -1,0 +1,34 @@
+@import "navbar.scss";
+@import "sidebar.scss";
+@import "./pages/homepage.scss";
+@import "./pages/schedule.scss";
+@import "./pages/schedule-manager.scss";
+@import "./forms/new-tournament.scss";
+@import "tournaments.scss";
+@import "./forms/add-delete-user.scss";
+@import "./pages/register.scss";
+@import "./pages/login.scss";
+
+body {
+    margin: 0px;
+    background-color: rgb(161, 158, 158);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.page-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+@media (max-width: 750px) {
+    .app {
+        display: grid;  
+        width: max-content;  
+    }
+
+    .page-wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+
+    }
+}
