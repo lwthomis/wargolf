@@ -14,12 +14,12 @@ import pga from '../../images/tour_logos/jrpga_logo.png';
 function Tournaments() {
 
     const [tournaments, setTournaments] = useState([]);
-    const currentPath = window.location.pathname;
+    const isAdmin = sessionStorage.getItem("isAdmin");
 
 //I wanted to get axios call results to sort by start date, however, couldn't figure out the .sort() function.
     useEffect(() => {
         axios
-        .get(`http://localhost:3001/tournaments`)
+        .get(`${process.env.REACT_APP_API}/tournaments`)
         .then(response => setTournaments(response.data.data))
         .catch(err => console.log(err));
     },[]); 
@@ -28,7 +28,7 @@ function Tournaments() {
     async function onDeleteClick(item) {
 
         await axios
-        .delete(`http://localhost:3001/tournaments/${item._id}`)
+        .delete(`${process.env.REACT_APP_API}/tournaments/${item._id}`)
         .then(() => alert("Tournament deleted."));
     }
 
@@ -41,7 +41,7 @@ function Tournaments() {
                         <a href={item.url} target="_blank" rel="noreferrer">{item.tournament}</a>
                     </div>
 
-                    {currentPath === '/schedule/manager' ? 
+                    {isAdmin === 'true' ? 
                         <button className='delete-button' type='submit' onClick={() => onDeleteClick(item)}>
                             <FontAwesomeIcon icon={faTrashAlt}/></button> : 
                         null} 

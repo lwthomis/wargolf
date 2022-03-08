@@ -70,7 +70,7 @@ function AddTournamentForm() {
             url: input.url
         };
 
-        axios.post('http://localhost:3001/tournaments/', newTournament);
+        axios.post(`${process.env.REACT_APP_API}/tournaments/`, newTournament);
             
         refreshPage();
         alert("Tournament Added.");

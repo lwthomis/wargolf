@@ -16,16 +16,15 @@ function Login() {
   const handleClick = (event) => {
     event.preventDefault();
     
-    axios.post(`http://localhost:3001/login`,{
+    axios.post(`${process.env.REACT_APP_API}`,{
         email: email,
         password: password
         })
         .then(function(response){
-            console.log(response);
             if (response.data.data.isAdmin === true){
                 sessionStorage.setItem("islogin", true);
                 sessionStorage.setItem("isAdmin", true);
-                navigate('/schedule/manager');
+                navigate('/schedule');
                 window.location.reload(false);
             }
             else if(response.data.data.isAdmin === false){
@@ -60,8 +59,6 @@ function Login() {
       {error && <><small style={{ color: 'red' }}>{error}</small><br /></>}<br />
       <div className='button-wrapper'>
         <button className="submit-button login-button" onClick={handleClick} type='submit'>Login</button>
-        <div>or...</div>
-        <Link to="/register"><button className="submit-button register-button">Sign Up New User</button></Link>
       </div>
     </div>
   );

@@ -19,7 +19,7 @@
             font-size: 1.25em;
     
             &:hover {
-                color: blue;    
+                filter: brightness(0); 
             }
         }        
     }
@@ -44,7 +44,7 @@
             padding-bottom: 25px;
 
             &:hover {
-                color: blue;
+                filter: brightness(0);
             }
         }
     }
@@ -57,7 +57,7 @@
             color: white;
             
             &:hover {
-                color:blue;
+                filter: brightness(0);
             }
         }
 

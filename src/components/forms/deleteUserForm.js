@@ -13,13 +13,13 @@ function DeleteUserForm() {
 
     useEffect(() => {
         axios
-        .get(`http://localhost:3001/users/`)
+        .get(`${process.env.REACT_APP_API}/users/`)
         .then(response=> setUsers(response.data.data))
         .catch(err=> console.log(err)); 
     },[]); 
     
     async function onDeleteClick(selectUser) {
-        await axios.delete(`http://localhost:3001/users/${selectUser}`);
+        await axios.delete(`${process.env.REACT_APP_API}/users/${selectUser}`);
         window.location.reload(true);
     }
     

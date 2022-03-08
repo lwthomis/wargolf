@@ -1,0 +1,15 @@
+.video-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 5px;
+    grid-gap: 5px;
+
+    // .swing-wrapper {
+    //     max-height: 400px;
+    // }
+}
+@media (max-width: 750px) {
+    .video-wrapper {
+        grid-template-columns: 1fr;
+    }
+}

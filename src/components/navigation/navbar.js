@@ -14,10 +14,9 @@ function Navbar() {
             <div className='left-side-nav'>
                 <div className='nav-link-wrapper'>    
                     <Link to='/'>Home</Link>
-                    <Link to='/schedule'>2022 Tournament Schedule</Link>                    
-                    { isAdmin === "true" ? 
-                        <Link to='/schedule/manager'>Schedule Manager</Link> 
-                    : null }
+                    <Link to='/schedule'>2022 Tournament Schedule</Link> 
+                    <Link to='/results'>Results</Link>
+                    <Link to='/swings'>Swing Videos</Link>                   
                     { isAdmin === "true" ? 
                         <Link to='/register'>User Manager</Link>
                     : null }

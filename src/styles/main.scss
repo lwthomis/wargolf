@@ -2,12 +2,14 @@
 @import "sidebar.scss";
 @import "./pages/homepage.scss";
 @import "./pages/schedule.scss";
-@import "./pages/schedule-manager.scss";
 @import "./forms/new-tournament.scss";
 @import "tournaments.scss";
 @import "./forms/add-delete-user.scss";
 @import "./pages/register.scss";
 @import "./pages/login.scss";
+@import "./pages/results.scss";
+@import "~video-react/styles/scss/video-react";
+@import "./pages/swings.scss";
 
 body {
     margin: 0px;

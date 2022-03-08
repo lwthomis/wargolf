@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
 import './styles/main.scss';
 
 import HomePage from './components/pages/home';
 import Login from './components/pages/login';
 import Schedule from './components/pages/schedule';
-import ScheduleManager from './components/pages/scheduleManager';
+import Swings from './components/pages/swings';
+import Results from './components/pages/results';
 import Navbar from './components/navigation/navbar';
 import Sidebar from './components/navigation/sidebar';
 import RegisterUser from './components/pages/registerUser';
@@ -25,7 +25,8 @@ function App() {
             <Route exact path='/schedule' element={<Schedule />} />
             <Route exact path='/login' element={<Login />} />
             <Route exact path='/register' element={<RegisterUser />} />
-            <Route exact path='/schedule/manager' element={<ScheduleManager />}/>
+            <Route exact path='/results' element={<Results />}/>
+            <Route exact path='/swings' element={<Swings />}/>
           </Routes>
         </div>
       </BrowserRouter>

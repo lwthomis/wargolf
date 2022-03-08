@@ -31,7 +31,8 @@
                         color: black;
                         border-bottom: 1px solid black;
                         cursor: pointer;
-                        background-color: rgba(160, 178, 184, .3);
+                        text-shadow: 2px 2px 8px #00fff2;
+                        // background-color: rgba(160, 178, 184, .3);
                     }
                 }
             }
@@ -56,7 +57,7 @@
             text-decoration: none;
 
             &:hover {
-                color: blue;
+                text-shadow: 2px 2px 8px #00fff2;
                 cursor: pointer;
             }
         }
