@@ -37,7 +37,7 @@ function NewUserForm() {
             isAdmin: checked,
         };
 
-        axios.post(`${process.env.REACT_APP_API}/users/`, newUser);
+        axios.post(`${process.env.REACT_APP_API}users/`, newUser);
             
         if (isAdmin === "true") {
             window.location.reload(true);

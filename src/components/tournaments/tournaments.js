@@ -19,7 +19,7 @@ function Tournaments() {
 //I wanted to get axios call results to sort by start date, however, couldn't figure out the .sort() function.
     useEffect(() => {
         axios
-        .get(`${process.env.REACT_APP_API}/tournaments`)
+        .get(`${process.env.REACT_APP_API}tournaments`)
         .then(response => setTournaments(response.data.data))
         .catch(err => console.log(err));
     },[]); 
@@ -28,7 +28,7 @@ function Tournaments() {
     async function onDeleteClick(item) {
 
         await axios
-        .delete(`${process.env.REACT_APP_API}/tournaments/${item._id}`)
+        .delete(`${process.env.REACT_APP_API}tournaments/${item._id}`)
         .then(() => alert("Tournament deleted."));
     }
 

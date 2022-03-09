@@ -10,7 +10,7 @@ export class Auth extends Component {
 
     verifySignIn() {
         axios
-            .post(`${process.env.REACT_APP_API}/users/signin/`)
+            .post(`${process.env.REACT_APP_API}users/signin/`)
             .then(response => {
                 console.log(response);
                 // this.setState({

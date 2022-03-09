@@ -9,7 +9,7 @@ function TournamentResults() {
 
     useEffect(() => {
         axios
-        .get(`${process.env.REACT_APP_API}/results`)
+        .get(`${process.env.REACT_APP_API}results`)
         .then(response=> {
             setResults(response.data.data);
             console.log(results);
